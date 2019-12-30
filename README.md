@@ -113,8 +113,10 @@ https://golang.org/
 https://gowebexamples.com/hello-world/
 
 ## Task 5: install docker
+Docker is already the newest version, Anyway it does no harm to go through the steps in the guide:
+
 **Main Steps:**
-Docker is already the newest version, Anyway it does not harm to go through the steps in the guide:
+
 ```
 docker version | grep Ver
     > 19.03.5
@@ -152,7 +154,6 @@ docker build -t go-web-hello-world .
 docker images
 docker run -p 8082:8081 -it --rm --name run-web-hello-world go-web-hello-world
 fix issue 'Error starting userland proxy: listen tcp 0.0.0.0:8082: bind: address already in use.' then rerun
-In browser:  http://10.210.149.171:8082/  shows 'Go Web Hello World!'
 ```
 **Isssues:**
 * Error starting userland proxy: listen tcp 0.0.0.0:8082: bind: address already in use.
@@ -172,6 +173,9 @@ In browser:  http://10.210.149.171:8082/  shows 'Go Web Hello World!'
        ==> sidekiq['listen_port'] = 8084    //sudo netstat -anp |grep 8084 shows 8084 is not in use so change it to 8084
     sudo gitlab-ctl reconfigure
     ```
+**Output:**
+
+In browser:  http://10.210.149.171:8082/  shows 'Go Web Hello World!'
 
 **Reference:**
 
@@ -304,7 +308,7 @@ https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
 ## Task 12: generate token for dashboard login in task 11
 **Main Steps:**
 ```
-Copy the yaml file in the guide ans save to files sa.yml and rb.yml
+Copy the yaml file in the guide and save to files sa.yml and rb.yml
 kubectl apply -f sa.yml
 kubectl apply -f rb.yml
 kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
