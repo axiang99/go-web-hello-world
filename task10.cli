@@ -1,0 +1,4 @@
+kubectl run go-web-hello-world --image axiang99/go-web-hello-world:v0.1  --replicas=1
+kubectl expose deployment go-web-hello-world --type=NodePort --port=8081
+kubectl edit svc go-web-hello-world
+  - nodePort: xxx  //replace the random nodePort xxx with 31080
