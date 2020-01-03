@@ -36,7 +36,7 @@ https://www.howtoforge.com/tutorial/how-to-upgrade-linux-kernel-in-ubuntu-1604-s
 sudo apt-get install -y curl openssh-server ca-certificates
 sudo apt-get install -y postfix
 curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
-sudo EXTERNAL_URL="http://gitlab.cetu170.com" apt-get install gitlab-ce 
+sudo EXTERNAL_URL="http://node-10-210-149-171.rnd.gic.ericsson.se" apt-get install gitlab-ce 
 Fix startup issue
 http://10.210.149.171/ reset password
 ```
